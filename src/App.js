@@ -1,12 +1,20 @@
 import React from 'react';
-import ScoreBoard from './Scoreboard';
+import TodoModel from './models/TodoModel';
+import TodoForm from './components/TodoForm';
+// import TodoList from './components/TodoList';
 
 class App extends React.Component {
+  constructor() {
+    super();
+
+    this.todos = new TodoModel();
+  }
+
     render() {
         return (
             <div>
-                <h1>High Scores</h1>
-                <ScoreBoard />
+              <TodoForm model={this.todos} />
+              
             </div>
         );
     }
