@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoModel from './models/TodoModel';
 import TodoForm from './components/TodoForm';
+import TodoList from './components/Todolist';
 // import TodoList from './components/TodoList';
 
 class App extends React.Component {
@@ -14,7 +15,8 @@ class App extends React.Component {
         return (
             <div>
               <TodoForm model={this.todos} />
-              
+              <TodoList model={this.todos} />
+
             </div>
         );
     }
