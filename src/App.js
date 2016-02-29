@@ -2,6 +2,7 @@ import React from 'react';
 import GeneralModel from './models/GeneralModel';
 import GeneralForm from './components/GeneralForm';
 import GeneralList from './components/GeneralList';
+import './stylesheets/_bootstrap.scss';
 
 
 class App extends React.Component {
@@ -13,11 +14,15 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-            
-              <GeneralForm model={this.generals} />
-              <GeneralList model={this.generals} />
-
+            <div className= "container">
+                <div className= "col-md-4">
+                </div>
+                <div className= "col-md-4 bottom">
+                  <GeneralList model={this.generals} />
+                  <GeneralForm model={this.generals} />
+                </div>
+                <div className= "col-md-4">
+                </div>
             </div>
         );
     }

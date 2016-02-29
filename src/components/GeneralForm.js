@@ -20,14 +20,16 @@ class GeneralForm extends React.Component {
   render(){
     return(
       <div>
-        <form onSubmit={this.createGeneral.bind(this)}>
-            <p> name
-              <input type="text" ref="newName" placeholder="your name"/>
-            </p>
-            <p> message
-              <input type="text" ref="newTitle" placeholder="your message"/>
-            </p>
-            <button type="submit">Send Message</button>
+        <form role="form" onSubmit={this.createGeneral.bind(this)}>
+          <div className="form-group">
+            <label for="name">Name:</label>
+              <input type="text" className="form-control" ref="newName" placeholder="your name"/>
+          </div>
+          <div className="form-group">
+            <label for="message">Message:</label>
+              <input type="text" className="form-control" ref="newTitle" placeholder="your message"/>
+          </div>
+          <button type="submit" class="btn btn-default">Send Message</button>
         </form>
       </div>
     );

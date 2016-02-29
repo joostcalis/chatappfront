@@ -27,7 +27,7 @@ class GeneralList extends React.Component {
       <div>
         <ul>
           {this.state.generals.map((general) => {
-            return(<li key={general._id}>{general.name} said: {general.title}</li>);
+            return(<li className="chatlist" key={general._id}>{general.name} said: {general.title}</li>);
           })}
         </ul>
       </div>
