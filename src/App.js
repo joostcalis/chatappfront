@@ -1,21 +1,22 @@
 import React from 'react';
-import TodoModel from './models/TodoModel';
-import TodoForm from './components/TodoForm';
-import TodoList from './components/Todolist';
-// import TodoList from './components/TodoList';
+import GeneralModel from './models/GeneralModel';
+import GeneralForm from './components/GeneralForm';
+import GeneralList from './components/GeneralList';
+
 
 class App extends React.Component {
   constructor() {
     super();
 
-    this.todos = new TodoModel();
+    this.generals = new GeneralModel();
   }
 
     render() {
         return (
             <div>
-              <TodoForm model={this.todos} />
-              <TodoList model={this.todos} />
+            
+              <GeneralForm model={this.generals} />
+              <GeneralList model={this.generals} />
 
             </div>
         );
